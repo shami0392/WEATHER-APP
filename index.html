@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="menu-bar" id="menu-bar">
+        <span class="menu-close" id="menu-close">&times;</span>
+        <div class="menu-header">
+            <h3>Saved Cities</h3>
+        </div>
+        <ul class="saved-cities-list" id="saved-cities-list">
+            <!-- Saved cities will be populated here by JavaScript -->
+        </ul>
+    </div>
+    <div class="main-container">
+        <header>
+            <div class="menu-icon" id="menu-icon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="search-box">
+                <input type="text" id="city-input" placeholder="Enter city name...">
+                <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </header>
+        <main>
+            <div class="loader" id="loader">
+                <div class="spinner"></div>
+            </div>
+            <div class="error-message" id="error-message">
+                <p>City not found. Please try again.</p>
+            </div>
+            <div class="weather-info" id="weather-info">
+                <div class="location-and-time">
+                    <h2 id="location"></h2>
+                    <p id="time"></p>
+                </div>
+                <div class="current-weather">
+                    <i id="weather-icon" class="fa-solid"></i>
+                    <p id="description"></p>
+                    <div class="temp">
+                        <span id="temp-value"></span>
+                        <span class="temp-unit" id="temp-unit-toggle">°C</span>
+                    </div>
+                </div>
+                <div class="detailed-info">
+                    <div class="info-card">
+                        <i class="fa-solid fa-wind"></i>
+                        <p>Wind Speed</p>
+                        <span id="wind-speed"></span>
+                    </div>
+                    <div class="info-card">
+                        <i class="fa-solid fa-droplet"></i>
+                        <p>Humidity</p>
+                        <span id="humidity"></span>
+                    </div>
+                    <div class="info-card">
+                        <i class="fa-solid fa-sun"></i>
+                        <p>Sunrise</p>
+                        <span id="sunrise"></span>
+                    </div>
+                    <div class="info-card">
+                        <i class="fa-solid fa-moon"></i>
+                        <p>Sunset</p>
+                        <span id="sunset"></span>
+                    </div>
+                </div>
+                
+                <div class="forecast-section">
+                    <h3>5-Day Forecast</h3>
+                    <div class="forecast-container" id="forecast-container">
+                        <!-- Forecast cards will be populated here -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal for Detailed Forecast -->
+    <div id="forecast-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" id="modal-close">&times;</span>
+            <h4 id="modal-day"></h4>
+            <p id="modal-date"></p>
+            <div class="modal-weather">
+                <i id="modal-icon" class="fa-solid"></i>
+                <div class="modal-temp">
+                    <span id="modal-temp-value"></span>
+                    <span id="modal-temp-unit"></span>
+                </div>
+                <p id="modal-description"></p>
+            </div>
+            <div class="modal-details">
+                <div class="detail-item">
+                    <p>Wind Speed</p>
+                    <span id="modal-wind-speed"></span>
+                </div>
+                <div class="detail-item">
+                    <p>Humidity</p>
+                    <span id="modal-humidity"></span>
+                </div>
+                <div class="detail-item">
+                    <p>Clouds</p>
+                    <span id="modal-clouds"></span>
+                </div>
+                <div class="detail-item">
+                    <p>Rain/Snow</p>
+                    <span id="modal-rain"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
