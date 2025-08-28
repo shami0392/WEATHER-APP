@@ -355,3 +355,4 @@ document.addEventListener('DOMContentLoaded', () => {
     renderSavedCities();
     fetchWeather(savedCities[0] || 'New York');
 });
+
