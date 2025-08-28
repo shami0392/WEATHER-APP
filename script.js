@@ -1,4 +1,5 @@
 
+
 const API_KEY = '364c3578df04e9b1a1bef5e09c19b5d6';
 
 // DOM Elements
@@ -355,4 +356,6 @@ document.addEventListener('DOMContentLoaded', () => {
     renderSavedCities();
     fetchWeather(savedCities[0] || 'New York');
 });
+
+
 

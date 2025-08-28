@@ -1,4 +1,4 @@
-/* General Styling */
+
 :root {
     --primary-color: #6a89cc;
     --secondary-color: #f1f2f6;
@@ -404,3 +404,5 @@ h2 {
         width: 100%;
     }
 }
+
+/* General Styling */
